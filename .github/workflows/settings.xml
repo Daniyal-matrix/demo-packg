@@ -1,71 +1,60 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
-		  
-<servers>
-   <server>
-     <id>nexus-releases</id>
-     <username>admin</username>
-     <password>admin123</password>
-   </server>
-   <server>
-     <id>nexus-snapshots</id>
-     <username>admin</username>
-     <password>admin123</password>
-   </server>
 
-   <server>
-      <id>github</id>
-      <username>Daniyal-matrix</username>
-      <password>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</password>
-    </server>
-  </servers>
+    <servers>
+        <server>
+            <id>github</id>
+            <username>Daniyal-matrix</username>
+            <password>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</password>
+        </server>
+    </servers>
 
 
-   
 
-  <mirrors>
-        <mirror>
-            <id>nexus</id>
-            <mirrorOf>*</mirrorOf>
-            <url>http://ur-build:8082/repository/maven-public</url>
-        </mirror>
-  </mirrors>
+
+    <!--  <mirrors>-->
+    <!--        <mirror>-->
+    <!--            <id>nexus</id>-->
+    <!--            <mirrorOf>*</mirrorOf>-->
+    <!--            <url>http://ur-build:8082/repository/maven-public</url>-->
+    <!--        </mirror>-->
+    <!--  </mirrors>-->
     <profiles>
+        <!--        <profile>-->
+        <!--            <id>snapshot</id>-->
+        <!--			<repositories>-->
+        <!--			<repository>-->
+        <!--                    <id>softpak</id>-->
+        <!--                    <name>Softpak repository</name>-->
+        <!--                    <url>http://ur-build:8082/repository/softpak-release/</url>-->
+        <!--				<releases>-->
+        <!--        <enabled>true</enabled>-->
+        <!--        </releases>-->
+        <!--					<snapshots>-->
+        <!--          <enabled>true-->
+        <!--          </enabled-->
+        <!--          ></snapshots>-->
+        <!--                </repository>-->
+        <!--            </repositories>-->
+        <!--        </profile>-->
+
         <profile>
-            <id>snapshot</id>
-			<repositories>
-			<repository>
-                    <id>softpak</id>
-                    <name>Softpak repository</name>
-                    <url>http://ur-build:8082/repository/softpak-release/</url>
-				<releases>
-        <enabled>true</enabled>
-        </releases>
-					<snapshots>
-          <enabled>true
-          </enabled
-          ></snapshots>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
                 </repository>
             </repositories>
         </profile>
 
-        <profile>
-      <id>github</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-        </repository>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-
     </profiles>
-    
+
 </settings>

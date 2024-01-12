@@ -3,17 +3,6 @@
 		  
 <servers>
    <server>
-     <id>nexus-releases</id>
-     <username>admin</username>
-     <password>admin123</password>
-   </server>
-   <server>
-     <id>nexus-snapshots</id>
-     <username>admin</username>
-     <password>admin123</password>
-   </server>
-
-   <server>
       <id>github</id>
       <username>Daniyal-matrix</username>
       <password>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</password>
@@ -23,31 +12,31 @@
 
    
 
-  <mirrors>
-        <mirror>
-            <id>nexus</id>
-            <mirrorOf>*</mirrorOf>
-            <url>http://ur-build:8082/repository/maven-public</url>
-        </mirror>
-  </mirrors>
+<!--  <mirrors>-->
+<!--        <mirror>-->
+<!--            <id>nexus</id>-->
+<!--            <mirrorOf>*</mirrorOf>-->
+<!--            <url>http://ur-build:8082/repository/maven-public</url>-->
+<!--        </mirror>-->
+<!--  </mirrors>-->
     <profiles>
-        <profile>
-            <id>snapshot</id>
-			<repositories>
-			<repository>
-                    <id>softpak</id>
-                    <name>Softpak repository</name>
-                    <url>http://ur-build:8082/repository/softpak-release/</url>
-				<releases>
-        <enabled>true</enabled>
-        </releases>
-					<snapshots>
-          <enabled>true
-          </enabled
-          ></snapshots>
-                </repository>
-            </repositories>
-        </profile>
+<!--        <profile>-->
+<!--            <id>snapshot</id>-->
+<!--			<repositories>-->
+<!--			<repository>-->
+<!--                    <id>softpak</id>-->
+<!--                    <name>Softpak repository</name>-->
+<!--                    <url>http://ur-build:8082/repository/softpak-release/</url>-->
+<!--				<releases>-->
+<!--        <enabled>true</enabled>-->
+<!--        </releases>-->
+<!--					<snapshots>-->
+<!--          <enabled>true-->
+<!--          </enabled-->
+<!--          ></snapshots>-->
+<!--                </repository>-->
+<!--            </repositories>-->
+<!--        </profile>-->
 
         <profile>
       <id>github</id>
